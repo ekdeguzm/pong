@@ -42,8 +42,8 @@ ball.shape("square")
 ball.color("white")
 ball.penup()
 ball.goto(0, 0)
-ball.dx = 1.5
-ball.dy = 1.5
+ball.dx = 1
+ball.dy = 1
 
 # Pen
 pen = turtle.Turtle()
@@ -140,7 +140,7 @@ while True:
         ball.dx *= -1
         os.system("afplay splat_sound.wav&")
 
-    if (ball.xcor() < -390 and ball.xcor() < -400) and (ball.ycor() < paddle_a.ycor() + 40 and ball.ycor() > paddle_a.ycor() - 40):
+    if (ball.xcor() < -390 and ball.xcor() > -400) and (ball.ycor() < paddle_a.ycor() + 40 and ball.ycor() > paddle_a.ycor() - 40):
         ball.setx(-390)
         ball.dx *= -1
         os.system("afplay splat_sound.wav&")
